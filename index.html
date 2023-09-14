@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap">
+
+</head>
+
+<body class=" font-abc">
+  <header
+    class=" h-[100vh] bg-[#F9F6E2] flex flex-col md:flex-row justify-between items-center px-4 md:px-10 lg:px-28 pt-8 md:pt-0 mb-10 md:mb-0">
+    <div class="md:w-1/2 text-center md:ml-40">
+      <h3 class="text-sm md:text-2xl font-medium">---SALE FEVER---</h3>
+      <h1 class="text-2xl md:text-4xl mb-6 md:mb-12 mt-6 md:mt-16 font-bold">Purchase TK 200 or<br>above & get
+        <span class="text-[#E527B2]">20% off</span>
+      </h1>
+      <div class="flex flex-col md:flex-row items-center">
+        <p class="text-base md:text-lg md:ml-16 font-medium">Use Promo Code</p>
+        <button id="copyButton"
+          class="btn btn-secondary text-base md:text-lg h-8 mt-2 md:mt-0 md:ml-2 text-white">SELL200</button>
+      </div>
+    </div>
+    <div class="w-3/5 md:w-1/2 mt-8 md:mt-0 ">
+      <img src="images/Summer 1.png" alt="" class="w-full h-auto " />
+    </div>
+  </header>
+  <main class=" flex flex-col md:flex-row md:p-36">
+    <div id="products" class="w-full md:w-3/4">
+      <div id="kitchenwire">
+        <h3 class="font-semibold text-2xl mb-6">Kitchenware</h3>
+        <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  md:pr-6 mb-8 ">
+          <!--cards-->
+          <div class="card  bg-base-100 shadow-xl  ">
+            <figure class="px-10 pt-10 mb-6">
+              <img src="/images//prod1.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="rating  justify-center">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <div class="card-body items-center text-center">
+              <h2 id="prod1-name" class="card-title text-xs">K. Accessories</h2>
+              <div class="flex flex-row mb-3">
+                <p id="prod1-price" class="text-xs">39.00</p>
+                <p class="text-xs">TK</p>
+              </div>
+              <button class="btn btn-outline btn-secondary btn-xs text-xs rounded-lg mb-3"
+                onclick="addToCart('prod1-name','prod1-price')">Add to Cart!!</button>
+            </div>
+          </div>
+          <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10 mb-6">
+              <img src="/images//prod2.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="rating  justify-center">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-xs" id="prod2-name">K. Accessories</h2>
+              <div class="flex flex-row mb-3">
+                <p class="text-xs" id="prod2-price">25.00</p>
+                <p class="text-xs">TK</p>
+              </div>
+              <button class="btn btn-outline btn-secondary btn-xs text-xs rounded-lg mb-3 "
+                onclick="addToCart('prod2-name','prod2-price')">Add to Cart!!</button>
+            </div>
+          </div>
+          <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10 mb-6">
+              <img src="/images//prod3.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="rating  justify-center">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-xs" id="prod3-name">Home Cooker</h2>
+              <div class="flex flex-row mb-3">
+                <p class="text-xs" id="prod3-price">49.00</p>
+                <p class="text-xs">TK</p>
+              </div>
+              <button class="btn btn-outline btn-secondary btn-xs text-xs rounded-lg mb-3"
+                onclick="addToCart('prod3-name','prod3-price')">Add to Cart!!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sportsware">
+        <h3 class="font-semibold text-2xl mb-6">Sportswear</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:pr-6 mb-8">
+          <!--cards-->
+          <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10 mb-6">
+              <img src="/images//prod4.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="rating  justify-center">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-xs" id="prod4-name">Sports Black Cap</h2>
+              <div class="flex flex-row mb-3">
+                <p class="text-xs" id="prod4-price">49.00</p>
+                <p class="text-xs">TK</p>
+              </div>
+              <button class="btn btn-outline btn-secondary btn-xs text-xs rounded-lg mb-3"
+                onclick="addToCart('prod4-name','prod4-price')">Add to Cart!!</button>
+            </div>
+          </div>
+          <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10 mb-6">
+              <img src="/images//prod5.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="rating  justify-center">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-xs" id="prod5-name">Full Jersey Set</h2>
+              <div class="flex flex-row mb-3">
+                <p class="text-xs" id="prod5-price">69.00</p>
+                <p class="text-xs">TK</p>
+              </div>
+              <button class="btn btn-outline btn-secondary btn-xs text-xs rounded-lg mb-3"
+                onclick="addToCart('prod5-name','prod5-price')">Add to Cart!!</button>
+            </div>
+          </div>
+          <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10 mb-6">
+              <img src="/images//prod6.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="rating  justify-center">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-xs" id="prod6-name">Sports Cates</h2>
+              <div class="flex flex-row mb-3">
+                <p class="text-xs" id="prod6-price">159.00</p>
+                <p class="text-xs">TK</p>
+              </div>
+              <button class="btn btn-outline btn-secondary btn-xs text-xs rounded-lg mb-3"
+                onclick="addToCart('prod6-name','prod6-price')">Add to Cart!!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="furniture">
+        <h3 class="font-semibold text-2xl mb-6">Furniture</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:pr-6 mb-8">
+          <!--cards-->
+          <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10 mb-6">
+              <img src="/images//prod7.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="rating  justify-center">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-xs" id="prod7-name">Single Relax Chair</h2>
+              <div class="flex flex-row mb-3">
+                <p class="text-xs" id="prod7-price">185.00</p>
+                <p class="text-xs">TK</p>
+              </div>
+              <button class="btn btn-outline btn-secondary btn-xs text-xs rounded-lg mb-3"
+                onclick="addToCart('prod7-name','prod7-price')">Add to Cart!!</button>
+            </div>
+          </div>
+          <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10 mb-6">
+              <img src="/images//prod8.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="rating  justify-center">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-xs" id="prod8-name">Children Play</h2>
+              <div class="flex flex-row mb-3">
+                <p class="text-xs" id="prod8-price">299.00</p>
+                <p class="text-xs">TK</p>
+              </div>
+              <button class="btn btn-outline btn-secondary btn-xs text-xs rounded-lg mb-3"
+                onclick="addToCart('prod8-name','prod8-price')">Add to Cart!!</button>
+            </div>
+          </div>
+          <div class="card  bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10 mb-6">
+              <img src="/images//prod9.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="rating  justify-center">
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            </div>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-xs" id="prod9-name">Flexible Sofa</h2>
+              <div class="flex flex-row mb-3">
+                <p class="text-xs" id="prod9-price">339.00</p>
+                <p class="text-xs">TK</p>
+              </div>
+              <button class="btn btn-outline btn-secondary btn-xs text-xs rounded-lg mb-3"
+                onclick="addToCart('prod9-name','prod9-price')">Add to Cart!!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="couponCart" class="w-4/5 md:w-1/4 mx-auto md:mx-0 md:pl-4">
+      <div id="coupon" class="mb-10">
+        <h3 class="text-xl font-medium mb-4">Have coupon?</h3>
+        <div class="flex flex-col md:flex-row">
+          <input id="coupon-input" type="text" placeholder="Type here"
+            class="input input-bordered input-secondary w-full  md:w-3/4 max-w-xs rounded-r-sm " />
+          <button id="apply-coupon-btn" class="btn btn-secondary w-full md:w-1/4 rounded-none text-white  rounded-r-lg"
+            onclick="couponApplied()">Apply</button>
+        </div>
+      </div>
+      <div id="cart">
+        <div id="orders" class="mb-10">
+          <ul id="cart-products" class="text-sm font-abc font-medium">
+          </ul>
+        </div>
+        <div id="prices">
+          <div class="flex flex-row mb-2">
+            <h3 class="font-medium">Total Price:</h3>
+            <h3 id="total-price">0.00</h3>
+            <h3>TK</h3>
+          </div>
+          <div class="flex flex-row mb-2">
+            <h3 class="font-medium">Discount:</h3>
+            <h3 id="discount-price">0.00</h3>
+            <h3>TK</h3>
+          </div>
+          <div class="flex flex-row mb-2">
+            <h3 class="font-medium">Total:</h3>
+            <h3 id="final-price">0.00</h3>
+            <h3>TK</h3>
+          </div>
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+          <!-- <button onclick="my_modal_8()" class="btn btn-secondary text-white w-full" id="make-purchase-btn">Make Purchase</button> -->
+           <!-- <a  href="#my_modal_8" class="btn btn-secondary text-white w-full" id="make-purchase-btn">Make Purchase</a>  -->
+          <button onclick="my_modal_8.simulateLinkClick()" class="btn btn-secondary text-white w-full" id="make-purchase-btn">Make Purchase</button> 
+          <div class="modal"id="my_modal_8" >
+            <div class="modal-box flex-col items-center h-40vh w-40vh mx-auto " >
+              <img src="images/congo.png" alt="" srcset="">
+              <h3 class="font-bold text-lg ">Congratulations!</h3>
+              <p class="py-4">On Your Purchase</p>
+              <div class="modal-action justify-center">
+                <button onclick="window.reload()"  class="btn btn-secondary text-white w-auto">Go Home</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="js/sell200.js"></script>
+  <script src="js//addToCart.js"></script>
+</body>
+
+</html>
